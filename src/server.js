@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5001;
 
 // middleware
 app.use(cors({
-  origin: "https://dd-frontend-liart.vercel.app/",
+  origin: "https://dd-frontend-6wgd0py00-flowz0s-projects.vercel.app",
   credentials: true,
 }));
 app.use(express.json()); // parse JSON bodies: req.body

@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5001;
 
 // middleware
 app.use(cors({
-  origin: "https://ductdaddykc.com",
+  origin: "https://www.ductdaddykc.com",
   credentials: true,
 }));
 app.use(express.json()); // parse JSON bodies: req.body

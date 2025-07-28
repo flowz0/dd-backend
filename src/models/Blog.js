@@ -37,6 +37,30 @@ const blogSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  header3: {
+    type: String,
+    required: false,
+  },
+  paragraph3: {
+    type: String,
+    required: false,
+  },
+  header4: {
+    type: String,
+    required: false,
+  },
+  paragraph4: {
+    type: String,
+    required: false,
+  },
+  header5: {
+    type: String,
+    required: false,
+  },
+  paragraph5: {
+    type: String,
+    required: false,
+  },
 }, { timestamps: true }); // createdAt, updatedAt
 
 const Blog = mongoose.model("Blog", blogSchema);

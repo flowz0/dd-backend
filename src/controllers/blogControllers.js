@@ -34,6 +34,12 @@ export const createBlog = async (req, res) => {
       paragraph,
       header2,
       paragraph2,
+      header3,
+      paragraph3,
+      header4,
+      paragraph4,
+      header5,
+      paragraph5,
     } = req.body;
     const blog = new Blog({
       author,
@@ -45,6 +51,12 @@ export const createBlog = async (req, res) => {
       paragraph,
       header2,
       paragraph2,
+      header3,
+      paragraph3,
+      header4,
+      paragraph4,
+      header5,
+      paragraph5,
       userId: req.userId,
     });
 
@@ -68,6 +80,12 @@ export const updateBlog = async (req, res) => {
       paragraph,
       header2,
       paragraph2,
+      header3,
+      paragraph3,
+      header4,
+      paragraph4,
+      header5,
+      paragraph5,
     } = req.body;
     const updatedBlog = await Blog.findByIdAndUpdate(req.params.id,
       {
@@ -80,6 +98,12 @@ export const updateBlog = async (req, res) => {
         paragraph,
         header2,
         paragraph2,
+        header3,
+        paragraph3,
+        header4,
+        paragraph4,
+        header5,
+        paragraph5,
       }, { new: true });
     if (!updatedBlog) return res.status(404).json({ message: "Blog not found" });
     res.status(200).json(updatedBlog);

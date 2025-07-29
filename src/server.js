@@ -5,7 +5,6 @@ import cookieParser from "cookie-parser";
 import blogRoutes from "./routes/blogRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
-import rateLimiter from "./middleware/rateLimiter.js";
 import { connectDB } from "./config/db.js";
 
 dotenv.config();
@@ -20,7 +19,6 @@ app.use(cors({
 }));
 app.use(express.json()); // parse JSON bodies: req.body
 app.use(cookieParser());
-app.use(rateLimiter);
 
 app.use("/api/blogs", blogRoutes);
 app.use("/api/auth", authRoutes);
